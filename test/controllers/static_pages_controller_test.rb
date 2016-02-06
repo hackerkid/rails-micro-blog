@@ -4,13 +4,13 @@ class StaticPagesControllerTest < ActionController::TestCase
 
   
   def setup
-    @base_title = "MicroBloggger"
+    @base_title = "MicroBlog"
   end
 
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home | #{@base_title}"
+    assert_select "title", "#{@base_title}"
     end
 
   test "should get help" do
